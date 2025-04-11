@@ -1,0 +1,24 @@
+---
+title: "Análisis Encuesta Inicial"
+author: "Melany Franco M"
+format: html
+editor: visual
+---
+
+## Importación datos
+
+```{r}
+encuesta <- read.csv2("total.csv")
+```
+
+## Análisis Variables
+
+### Respuesta
+
+```{r}
+encuesta$Respuesta |>
+  unique() |>
+  length()
+```
+
+Cada identificador de respuesta es diferente (28 registros)
