@@ -3,7 +3,7 @@
     "path": "C:/Users/Melany/Desktop/AnalisisEncuestaEDAED/analisisEncuesta.qmd",
     "project_path": "analisisEncuesta.qmd",
     "type": "quarto_markdown",
-    "hash": "2477113261",
+    "hash": "775291260",
     "contents": "",
     "dirty": false,
     "created": 1744388336690.0,
@@ -15,18 +15,18 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "17,6",
-        "scrollLine": "0",
-        "docOutlineVisible": "1",
+        "cursorPosition": "29,65",
+        "scrollLine": "9",
+        "docOutlineVisible": "0",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "240:0"
+        "rmdVisualModeLocation": "240:96.80000305175781"
     },
     "folds": "",
     "lastKnownWriteTime": 1744388763,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1744388763385,
+    "last_content_update": 1744688614051,
     "read_only": false,
     "read_only_alternatives": []
 }

@@ -22,3 +22,11 @@ encuesta$Respuesta |>
 ```
 
 Cada identificador de respuesta es diferente (28 registros)
+### Plan
+```{r}
+sum(encuesta$PLAN == "3504 - ESTADÍSTICA")
+```
+```{r}
+sum(encuesta$PLAN == "3534 - INGENIERÍA DE SISTEMAS E INFORMÁTICA")
+```
+
