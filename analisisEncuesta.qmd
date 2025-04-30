@@ -15,10 +15,87 @@ encuesta <- read.csv2("total.csv")
 
 ### Respuesta
 
+Cada identificador de respuesta es diferente (28 registros)
+
 ```{r}
 encuesta$Respuesta |>
   unique() |>
   length()
 ```
 
-Cada identificador de respuesta es diferente (28 registros)
+### Plan
+
+Cantidad de estudiantes de estadística
+
+```{r}
+sum(encuesta$PLAN == "3504 - ESTADÍSTICA")
+```
+
+Cantidad de estudiantes de Ingeniería de Sistemas
+
+```{r}
+sum(encuesta$PLAN == "3534 - INGENIERÍA DE SISTEMAS E INFORMÁTICA")
+```
+
+### Porcentaje Carrera
+
+Dividir por 10 aquellos avances mayores a 100
+
+```{r}
+encuesta$Q03_Porcentaje.de.la.carrera<- ifelse(encuesta$Q03_Porcentaje.de.la.carrera > 100, encuesta$Q03_Porcentaje.de.la.carrera / 10, encuesta$Q03_Porcentaje.de.la.carrera)
+
+```
+
+Visualización porcentajes
+
+```{r}
+hist(encuesta$Q03_Porcentaje.de.la.carrera)
+```
+
+### Fecha de nacimiento
+
+Convertir fechas de nacimiento a tipo fecha
+
+```{r}
+encuesta$Q04_Fecha.de.nacimiento <- as.Date(encuesta$Q04_Fecha.de.nacimiento, format = "%Y-%m-%d")
+```
+
+Visualización fechas de nacimiento
+
+```{r}
+barplot(table(floor(as.numeric(format(encuesta$Q04_Fecha.de.nacimiento, "%Y")) / 10) * 10))
+
+```
+
+### Género
+
+```{r}
+table(encuesta$Q01_Género)
+```
+
+### PAPA
+
+Dividir por 10 aquellos PAPAs mayores a 5.0
+
+```{r}
+encuesta$Q02_PAPA<- ifelse(encuesta$Q02_PAPA > 5, encuesta$Q02_PAPA / 10, encuesta$Q02_PAPA)
+```
+
+Visualización PAPAs
+
+```{r}
+encuesta$Q02_PAPA |> hist()
+```
+
+### Gasto alimentación
+Multiplicar por 1000 auquellos valores menores a 100
+```{r}
+encuesta$Q09_Gasto.alimentacion<- ifelse(encuesta$Q09_Gasto.alimentacion > 5, encuesta$Q09_Gasto.alimentacion / 10, encuesta$Q09_Gasto.alimentacion)
+```
+Visualización gasto alimetación
+```{r}
+encuesta$Q09_Gasto.alimentacion |> hist()
+```
+
+
+
